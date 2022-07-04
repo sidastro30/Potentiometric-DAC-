@@ -1,4 +1,4 @@
-# 10-bit-DAC-using-Synopsys-Custom-Compiler
+# Potentiometric 10-bit-DAC
 ## **ABSTRACT**
 Digital to Analog Converter(DAC) is an electronic device, often an integrated circuit, that converts a digital number into a corresponding analog voltage or current. In this project I have used bottom-up approach to design the pre-layout view of 10-bit DAC, viz, for designing n-bit DAC we need 2 sub-circuits of the (n-1)-bit DAC and a sub-circuit of switch. They are connected in such a manner that the low reference voltage of first (n-1)-bit DAC is connected to the high reference voltage of the second (n-1)-bit DAC. Output of both the DACs are given to the switch circuit such that output of first DAC is the input to the high reference voltage of the switch and output of the second DAC is the input to the low reference voltage of the switch. Output of the switch is the final analog output of the DAC.
 
@@ -7,7 +7,8 @@ In real world, most of the signals are analog in nature while the digital system
 
 An n-bit Digital to Analog Converter (DAC) takes in n-bit digital input and converts it into corresponding analog voltage level with respect to the reference voltage. The potentiometric DAC used in the design uses the concept of Voltage Divider. It consists of 2^N equal resistors connencted in series. The basic architecture of an N-bit potentiometric DAC is shown in the figure below.
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/N-bit-DAC.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/n-bit-DAC.png)
+
 
 ## **TOOLS USED**
 * Synopsys Custom Compiler:  The Synopsys Custom Compiler™ design environment is a modern solution for full-custom analog, custom digital, and mixed-signal IC design. As the heart of the Synopsys Custom Design Platform, Custom Compiler provides design entry, simulation management and analysis, and custom layout editing features. This tool was used to design the circuit on a transistor level.
@@ -19,181 +20,207 @@ An n-bit Digital to Analog Converter (DAC) takes in n-bit digital input and conv
 # **Switch**
 The schematic of the switch circuit designed in the Synopsys Custom Compiler is shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/Switch%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/Switch%20schematic.png)
 
 The symbol of the switch generated using Symbol Editor is shown below
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/Switch%20Symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/Switch%20Symbol.png)
 
 The test bench of the switch is shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/Switch%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/Switch%20test%20bench.png)
 
 The output waveform of the switch circuit is also shown below
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/Switch%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/Switch%20waveform.png)
 
 # **2-bit DAC**
 2-bit DAC is designed using 3 switch circuits.
 The schematic of the 2-bit DAC is shown below
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/2-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/2-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 2-bit DAC is as shown below
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/2-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/2-bit%20DAC%20symbol.png)
 
 The test bench of the 2-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/2-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/2-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 2-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/2-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/2-bit%20DAC%20waveform.png)
 
 # **3-bit DAC**
 3-bit DAC is designed using two units of 2-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 3-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/3-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/3-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 3-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/3-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/3-bit%20DAC%20symbol.png)
 
 The test bench of the 3-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/3-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/3-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 3-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/3-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/3-bit%20DAC%20waveform.png)
 
 # **4-bit DAC**
 4-bit DAC is designed using two units of 3-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 4-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/4-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/4-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 4-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/4-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/4-bit%20DAC%20symbol.png)
 
 The test bench of the 4-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/4-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/4-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 4-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/4-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/4-bit%20DAC%20waveform.png)
 
 # **5-bit DAC**
 5-bit DAC is designed using two units of 4-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 5-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/5-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/5-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 5-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/5-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/5-bit%20DAC%20symbol.png)
 
 The test bench of the 5-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/5-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/5-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 5-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/5-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/5-bit%20DAC%20waveform.png)
 
 # **6-bit DAC**
 6-bit DAC is designed using two units of 5-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 6-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/6-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/6-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 6-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/6-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/6-bit%20DAC%20symbol.png)
 
 The test bench of the 6-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/6-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/6-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 6-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/6-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/6-bit%20DAC%20waveform.png)
 
 # **7-bit DAC**
 7-bit DAC is designed using two units of 6-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 7-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/7-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/7-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 7-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/7-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/7-bit%20DAC%20symbol.png)
 
 The test bench of the 7-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/7-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/7-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 7-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/7-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/7-bit%20DAC%20waveform.png)
 
 # **8-bit DAC**
 8-bit DAC is designed using two units of 7-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 8-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/8-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/8-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 8-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/8-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/8-bit%20DAC%20symbol.png)
 
 The test bench of the 8-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/8-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/8-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 8-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/8-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/8-bit%20DAC%20waveform.png)
 
 # **9-bit DAC**
 9-bit DAC is designed using two units of 8-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 9-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/9-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/9-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 9-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/9-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/9-bit%20DAC%20symbol.png)
 
 The test bench of the 9-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/9-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/9-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 9-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/9-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/9-bit%20DAC%20waveform.png)
 
 # **10-bit DAC**
 10-bit DAC is designed using two units of 9-bit DAC and one unit of switch as sub-circuit.
 The schematic of the 10-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/10-bit%20DAC%20schematic.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/10-bit%20DAC%20schematic.png)
 
 The symbolic representation of the 10-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/10-bit%20DAC%20symbol.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/10-bit%20DAC%20symbol.png)
 
 The test bench of the 10-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/10-bit%20DAC%20test%20bench.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/10-bit%20DAC%20test%20bench.png)
 
 The output waveform of the 10-bit DAC is as shown below
 
-![](https://github.com/shashank2210/10-bit-DAC-using-Synopsys-Custom-Compiler/blob/main/10-bit%20DAC%20waveform.png)
+![](https://github.com/sidastro30/Potentiometric-DAC-/blob/main/10-bit%20DAC%20waveform.png)
+
+
+# **DAC Resolution Comparison**
+## 4bit
+![image](https://user-images.githubusercontent.com/81389879/177216366-c4d29721-76cf-4e9f-9e30-a00f3188788a.png)
+
+## 5bit
+![image](https://user-images.githubusercontent.com/81389879/177216523-a7b40f4f-4fc4-4ab4-bae8-af505d9579e3.png)
+
+## 6bit
+![image](https://user-images.githubusercontent.com/81389879/177216646-48f88c2e-d312-4467-a91e-39af71ade319.png)
+
+## 7bit
+![image](https://user-images.githubusercontent.com/81389879/177216705-1b44cde3-c755-4eff-b42f-711dd79afff6.png)
+
+## 8bit
+![image](https://user-images.githubusercontent.com/81389879/177216768-1dbd2699-1ae6-468e-994c-c15e008b5e05.png)
+
+## 9bit
+![image](https://user-images.githubusercontent.com/81389879/177216816-23e19252-1313-429c-bfc1-07169ceba5e4.png)
+
+## 10bit
+![image](https://user-images.githubusercontent.com/81389879/177216883-b8b1997e-64e8-4330-893f-e7dc9c84a815.png)
+
+
+
 
 
 ## **NETLIST**
-
+```
 *  Generated for: PrimeSim
 *  Design library name: sm_dac_new
 *  Design cell name: sm_10bit_dac_new_tb
@@ -201,7 +228,7 @@ The output waveform of the 10-bit DAC is as shown below
 .lib '/PDK/SAED_PDK32nm/hspice/saed32nm.lib' TT
 
 *Custom Compiler Version S-2021.09
-*Tue Mar  1 12:54:37 2022
+*Sun Feb 28 05:37:09 2022
 
 .global gnd!
 ********************************************************************************
@@ -401,20 +428,18 @@ v3 d0 gnd! dc=0 pulse ( 0 1.05 0 0.1u 0.1u 5u 10u )
 
 
 .end
-
+```
 
 ## **CONCLUSION**
 The conversion of digital input to analog output is thus shown in this project. Moreover the design flow is also maintained by adding schematic view followed by conversion to symbol further followed by the test bench using the symbol and finally using the PrimeWave to generate the output waveform of the test bench.
 
 ## **AUTHOR**
-Shashank Mishra, Jadavpur University
+Siddharth Pal, Indian Institute of Technology Kharagpur- IIT KGP
 
 ## **ACKNOWLEDGEMENT**
-* Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com
-* Chinmay panda, IIT Hyderabad
-* Sameer Durgoji, NIT Karnataka
-* Synopsys Team/Company
+ - [Synopsys India](https://www.synopsys.com/)
+ - [Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.](https://www.vlsisystemdesign.com/)
+ - [Electrical Engineering Department of IIT Hyderabad, Cloud Based Analog IC Design Hackathon](https://www.iith.ac.in/events/2022/02/15/Cloud-Based-Analog-IC-Design-Hackathon/)
+ * Chinmay panda, IIT Hyderabad
+ * Sameer Durgoji, NIT Karnataka
 
-## **REFERENCES**
-* Sameer Durgoji's video
-* Inderjit Singh Dhanjal's YouTube video
